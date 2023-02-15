@@ -23,7 +23,7 @@ async function fetchData() {
         const categoryUp = upEvents.map(event => event.category)
         const categoryFirstUp = [...new Set(categoryUp)]
         const incomeUp = income(upEvents, categoryFirstUp)
-        const assistanceUpData = assistanceUp(pastEvents, categoryFirstUp)
+        const assistanceUpData = assistanceUp(upEvents, categoryFirstUp)
 
         // Past events
 

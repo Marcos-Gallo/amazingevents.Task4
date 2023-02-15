@@ -301,3 +301,4 @@ export function statistics(noRepeat, income, assistanceP) {
     }
     return statistics
 }
+console.log(assistancePast)
