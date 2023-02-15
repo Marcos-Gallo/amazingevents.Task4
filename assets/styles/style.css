@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 180px;
+}
+
+body {
+    background-color: rgb(105, 92, 163);
+}
+
+main {
+    overflow-x: hidden;
+    min-height: 80vh;
+}
+
+.title-main {
+    border: solid 1px black;
+    opacity: .7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+}
+
+.categ-check {
+    display: flex;
+    flex-direction: row;
+}
+
+.events-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 5rem;
+    align-items: center;
+}
+
+.card-body img {
+    width: 12.8rem;
+    height: 7.8rem;
+}
+
+
+.card-body {
+    text-align: center;
+}
+
+.main-events {
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: space-around;
+}
+
+.card {
+    margin: 2rem;
+    opacity: .9;
+    background-color: rgb(158, 158, 158);
+    text-align: center;
+}
+
+.card-title {
+    margin-top: 0.5rem;
+}
+
+.labels {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 30rem;
+    width: 100vw;
+}
+
+#cont-table {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: 100vh;
+    justify-content: space-around;
+    text-align: center;
+    margin-left: 4rem;
+
+}
+
+table,
+tr,
+th,
+td {
+    border-collapse: collapse;
+    border: solid 2px rgb(0, 0, 0);
+    height: 1rem;
+}
+
+th {
+    background-color: rgb(77, 82, 82);
+    color: antiquewhite;
+}
+
+td,
+tr {
+    background-color: rgb(158, 158, 158);
+}
+
+
+
+/* table,
+tr,
+th,
+td {
+    border-collapse: collapse;
+    border: solid 2px rgb(0, 0, 0);
+    height: 1rem;
+}
+
+td,
+tr {
+    background-color: rgb(158, 158, 158);
+}
+
+.table-title {
+    height: 3rem;
+    background-color: rgb(51, 50, 50);
+    color: white;
+}
+
+.stats-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+} */
+
+.img-footer {
+    width: 50px;
+}
+
+.footer-img {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.footer-img div {
+    margin: 1rem;
+}
+
+footer {
+    margin-left: 2rem;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+footer p {
+    font-weight: bolder;
+    font-size: 1.8rem;
+}
+
+.details-content {
+    display: flex;
+    justify-content: center;
+}
+
+
+.checks {
+    display: flex;
+    flex-direction: row;
+    width: 40rem;
+}
+
+.search-inp {
+    display: flex;
+    flex-direction: row;
+    width: 20rem;
+    height: 5rem;
+
+}
+
+.contBuscadores {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+@media (min-width:425px) and (max-width:767px) {
+    .categ-check {
+        display: none;
+    }
+
+    .events-inputs {
+        flex-direction: column-reverse;
+        margin: 1rem;
+    }
+
+    .dropdown-item {
+        align-items: center;
+    }
+
+    form {
+        display: none;
+    }
+
+    .form2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+
+    .stats-table {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40rem;
+        width: 100vw;
+    }
+
+    table {
+        width: 20rem;
+    }
+
+    footer p {
+        display: none;
+    }
+
+    footer {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .categ-check {
+        display: none;
+    }
+
+    .events-inputs {
+        flex-direction: column-reverse;
+        margin: 1rem;
+    }
+
+    .dropdown-item {
+        align-items: center;
+    }
+
+    .form2 {
+        display: none;
+    }
+
+    .stats-table {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40rem;
+        width: 100vw;
+    }
+
+    table {
+        width: 40rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .dropdown {
+        display: none;
+    }
+
+    .form2 {
+        display: none;
+    }
+}
