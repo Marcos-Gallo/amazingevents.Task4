@@ -10,7 +10,7 @@ export function cardsCreate(list) {
     <p class="card-text" id="textoParrafo"> ${evento.description} </p>
     <div id="boton1">
     <p> Price: $ ${evento.price} </p>
-    <a href="./assets/details.html?id=${evento._id}&nombre=${evento.name}" class="btn btn-primary" id="move">Details</a>"
+    <a href="./assets/details.html?id=${evento._id}&nombre=${evento.name}" class="btn btn-primary" id="move">Details</a>
     </div>
     </div>
 </div>`
@@ -146,7 +146,7 @@ export function filterCheckPast(evento) {
     return evento.filter((filterCheck) => marcarCheck.includes(filterCheck.category));
 }
 
-export function filtradoDeBuscadorPast(buscar, dataEventosPast) {
+export function filterForSearchPast(buscar, dataEventosPast) {
     let buscadorFiltrado = dataEventosPast.filter(buscadorInterno => buscadorInterno.name.toLowerCase().includes(buscar))
     if (buscadorFiltrado.length === 0) {
 
@@ -301,4 +301,3 @@ export function statistics(noRepeat, income, assistanceP) {
     }
     return statistics
 }
-console.log(assistancePast)

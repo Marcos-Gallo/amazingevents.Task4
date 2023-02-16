@@ -14,12 +14,15 @@ fetch("https://mindhub-xj03.onrender.com/api/amazing")
         cardsCreate(dataEvents, cardsContainer);
         createCheck(categFilt, check);
         check.addEventListener("change", () => {
-            let aux = filterChecks(dataEvents);
+            let search = buscador.value.toLowerCase();
+            let fnFiltered = filterForSearch(search, dataEvents);
+            let aux = filterChecks(fnFiltered);
             cardsCreate(aux);
         });
         buscador.addEventListener('keyup', (e) => {
+            let aux = filterChecks(dataEvents);
             let search = buscador.value.toLowerCase();
-            let fnFiltered = filterForSearch(search, dataEvents);
+            let fnFiltered = filterForSearch(search, aux);
             let filtCheckCard = filterChecks(fnFiltered);
             cardsCreate(filtCheckCard)
         });

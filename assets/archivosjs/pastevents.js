@@ -1,22 +1,26 @@
-import { cardCreatePast, checkCreatePast, filterCheckPast, filtradoDeBuscadorPast } from "./module/functions.js"
+import { cardCreatePast, checkCreatePast, filterCheckPast, filterForSearchPast } from "./module/functions.js"
+
+const buscador = document.getElementById("formSearch");
+const check = document.getElementById("checksPad");
 
 fetch("https://mindhub-xj03.onrender.com/api/amazing")
     .then(response => response.json())
     .then((data) => {
         const dataEventosPast = data.events;
-        const buscador = document.getElementById("formSearch");
-        const check = document.getElementById("checksPad");
-        const filtrarCategorias = [... new Set(dataEventosPast.map(categoria => categoria.category))];
+
+        const categFilt = [... new Set(dataEventosPast.map(categoria => categoria.category))];
         cardCreatePast(dataEventosPast);
-        checkCreatePast(filtrarCategorias, check);
+        checkCreatePast(categFilt, check);
         check.addEventListener("change", () => {
-            let aux = filterCheckPast(dataEventosPast);
+            let search = buscador.value.toLowerCase();
+            let functionFilt = filterForSearchPast(search, dataEventosPast);
+            let aux = filterCheckPast(functionFilt);
             cardCreatePast(aux);
         });
         buscador.addEventListener('keyup', (e) => {
-            e.preventDefault()
-            let buscar = buscador.value.toLowerCase();
-            let functionFilt = filtradoDeBuscadorPast(buscar, dataEventosPast);
+            let aux = filterCheckPast(dataEventosPast);
+            let search = buscador.value.toLowerCase();
+            let functionFilt = filterForSearchPast(search, aux);
             let checkCardFiltPast = filterCheckPast(functionFilt);
             cardCreatePast(checkCardFiltPast)
         });

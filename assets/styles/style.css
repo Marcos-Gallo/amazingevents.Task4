@@ -26,19 +26,6 @@ main {
     height: 6rem;
 }
 
-.categ-check {
-    display: flex;
-    flex-direction: row;
-}
-
-.events-inputs {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 5rem;
-    align-items: center;
-}
-
 .card-body img {
     width: 12.8rem;
     height: 7.8rem;
@@ -113,34 +100,6 @@ tr {
 }
 
 
-
-/* table,
-tr,
-th,
-td {
-    border-collapse: collapse;
-    border: solid 2px rgb(0, 0, 0);
-    height: 1rem;
-}
-
-td,
-tr {
-    background-color: rgb(158, 158, 158);
-}
-
-.table-title {
-    height: 3rem;
-    background-color: rgb(51, 50, 50);
-    color: white;
-}
-
-.stats-table {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30rem;
-} */
-
 .img-footer {
     width: 50px;
 }
@@ -186,29 +145,46 @@ footer p {
     display: flex;
     flex-direction: row;
     width: 20rem;
-    height: 5rem;
+    height: 3rem;
+    justify-content: space-between;
 
 }
 
-.contBuscadores {
+.filters-cont {
+    padding: 1rem;
+    margin: 1rem;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: antiquewhite;
 }
+
+.searchBtn {
+    height: 2.5rem;
+    border: solid 4px rgb(74, 78, 78);
+    border-style: double;
+    border-radius: 0.5rem;
+    background-color: rgb(147, 155, 155);
+    color: rgb(55, 42, 114);
+    padding: 0.3rem;
+}
+
+
 
 
 
 @media (min-width:425px) and (max-width:767px) {
-    .categ-check {
-        display: none;
+    .filters-cont {
+        display: flex;
+        flex-direction: column;
     }
 
-    .events-inputs {
-        flex-direction: column-reverse;
-        margin: 1rem;
-    }
-
-    .dropdown-item {
-        align-items: center;
+    .checks {
+        display: flex;
+        scale: 0.6;
     }
 
     form {
@@ -247,21 +223,14 @@ footer p {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    .categ-check {
-        display: none;
-    }
-
-    .events-inputs {
-        flex-direction: column-reverse;
-        margin: 1rem;
-    }
-
-    .dropdown-item {
-        align-items: center;
-    }
-
     .form2 {
         display: none;
+    }
+
+    .filters-cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center
     }
 
     .stats-table {
@@ -278,10 +247,6 @@ footer p {
 }
 
 @media (min-width: 1024px) {
-    .dropdown {
-        display: none;
-    }
-
     .form2 {
         display: none;
     }
